@@ -6,6 +6,7 @@ vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.wo.cursorline = false
 
 vim.opt.title = true
 vim.opt.autoindent = true
@@ -25,7 +26,6 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.cursorline = false
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders

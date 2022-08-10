@@ -209,6 +209,21 @@ _G.packer_plugins = {
     path = "/home/core/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "/home/core/.local/share/nvim/site/pack/packer/start/typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/home/core/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-jsx-typescript"] = {
+    loaded = true,
+    path = "/home/core/.local/share/nvim/site/pack/packer/start/vim-jsx-typescript",
+    url = "https://github.com/peitalin/vim-jsx-typescript"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/core/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
