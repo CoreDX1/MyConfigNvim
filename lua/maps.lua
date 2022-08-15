@@ -24,5 +24,23 @@ map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>",
 map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
 
+--Hop
+map("n", "f", "<cmd>HopChar1CurrentLineAC<CR>")
+map("n", "F", "<cmd>HopChar1CurrentLineBC<CR>")
+map("n", "s", "<cmd>HopChar2AC<CR>")
+map("n", "S", "<cmd>HopChar2BC<CR>")
+map("n", "<leader>s", "<cmd>HopLineStartAC<CR>")
+map("n", "<leader>S", "<cmd>HopLineStartBC<CR>")
+
+--Smart splits
+map('n', '<C-h>', require('smart-splits').move_cursor_left)
+map('n', '<C-j>', require('smart-splits').move_cursor_down)
+map('n', '<C-k>', require('smart-splits').move_cursor_up)
+map('n', '<C-l>', require('smart-splits').move_cursor_right)
+
+map('n', '<A-h>', require('smart-splits').resize_left)
+map('n', '<A-j>', require('smart-splits').resize_down)
+map('n', '<A-k>', require('smart-splits').resize_up)
+map('n', '<A-l>', require('smart-splits').resize_right)
 --Neo
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")

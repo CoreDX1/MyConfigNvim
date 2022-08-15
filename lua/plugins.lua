@@ -48,4 +48,36 @@ packer.startup(function(use)
     use 'pangloss/vim-javascript'
     use 'leafgarland/typescript-vim'
     use 'peitalin/vim-jsx-typescript'
+    --Surround
+    use({
+        "kylechui/nvim-surround",
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+    --Hop
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
+    --Zen
+    use({
+        "Pocco81/true-zen.nvim",
+        config = function()
+            require("true-zen").setup {
+                -- your config goes here
+                -- or just leave it empty :)
+            }
+        end,
+    })
+
+    use 'simrat39/symbols-outline.nvim'
+    use('mrjones2014/smart-splits.nvim')
+
 end)
