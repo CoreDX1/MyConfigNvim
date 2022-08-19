@@ -44,3 +44,4 @@ map('n', '<A-k>', require('smart-splits').resize_up)
 map('n', '<A-l>', require('smart-splits').resize_right)
 --Neo
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+

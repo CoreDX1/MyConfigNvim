@@ -24,14 +24,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
-    -- formatting
-    if client.server_capabilities.documentFormattingProvider then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            group = vim.api.nvim_create_augroup("Format", { clear = true }),
-            buffer = bufnr,
-            callback = function() vim.lsp.buf.formatting_seq_sync() end
-        })
-    end
 end
 
 protocol.CompletionItemKind = {
@@ -67,11 +59,6 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.flow.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
 nvim_lsp.cssls.setup {
     on_attach = on_attach,
     capabilities = capabilities
@@ -88,10 +75,6 @@ nvim_lsp.tsserver.setup {
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     cmd = { "typescript-language-server", "--stdio" },
     capabilities = capabilities
-}
-
-nvim_lsp.sourcekit.setup {
-    on_attach = on_attach,
 }
 
 nvim_lsp.sumneko_lua.setup {
