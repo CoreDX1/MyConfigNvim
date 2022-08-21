@@ -48,4 +48,4 @@ map("n", "<leader>x", "<cmd>BufferLinePickClose<CR>")
 map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
 map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
 --Lspsaga
-map('n', '<leader>j', '<cmd>Lspsaga show_line_diagnostics<CR>')
+map('n', '<leader>gd', '<cmd>Lspsaga show_line_diagnostics<CR>')
