@@ -37,11 +37,15 @@ map('n', '<C-h>', require('smart-splits').move_cursor_left)
 map('n', '<C-j>', require('smart-splits').move_cursor_down)
 map('n', '<C-k>', require('smart-splits').move_cursor_up)
 map('n', '<C-l>', require('smart-splits').move_cursor_right)
-
 map('n', '<A-h>', require('smart-splits').resize_left)
 map('n', '<A-j>', require('smart-splits').resize_down)
 map('n', '<A-k>', require('smart-splits').resize_up)
 map('n', '<A-l>', require('smart-splits').resize_right)
---Neo
-map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
+--Bufferline
+map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+map("n", "<leader>x", "<cmd>BufferLinePickClose<CR>")
+map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
+map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+--Lspsaga
+map('n', '<leader>j', '<cmd>Lspsaga show_line_diagnostics<CR>')
