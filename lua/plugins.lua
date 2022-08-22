@@ -78,6 +78,15 @@ packer.startup(function(use)
 
     use 'simrat39/symbols-outline.nvim'
     use('mrjones2014/smart-splits.nvim')
-    use {'akinsho/bufferline.nvim', tag = "v2.*"}
+    use { 'akinsho/bufferline.nvim', tag = "v2.*" }
     use "cpea2506/one_monokai.nvim"
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup({
+                pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+            })
+        end
+    }
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 end)
