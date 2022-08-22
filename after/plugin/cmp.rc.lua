@@ -35,10 +35,10 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
-    { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
-    { name = 'buffer' },
-    { name = 'path' }
+    { name = 'path' },
+    { name = 'cmp_tabnine' },
+    { name = 'buffer' }
   }),
   formatting = {
     format = function(entry, vim_item)
