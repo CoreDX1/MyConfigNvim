@@ -50,4 +50,4 @@ map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
 --Lspsaga
 map('n', '<leader>gj', '<cmd>Lspsaga show_line_diagnostics<CR>')
 --Formatting
-map('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>')
+    map('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>')

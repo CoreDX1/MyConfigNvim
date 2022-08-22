@@ -9,11 +9,11 @@ require 'cmp'.setup {
   },
 }
 local source_mapping = {
+	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
 	cmp_tabnine = "[TN]",
 	path = "[Path]",
-	buffer = "[Buffer]",
-	nvim_lua = "[Lua]",
 }
 
 cmp.setup({

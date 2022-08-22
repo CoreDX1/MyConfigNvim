@@ -79,4 +79,5 @@ packer.startup(function(use)
     use 'simrat39/symbols-outline.nvim'
     use('mrjones2014/smart-splits.nvim')
     use {'akinsho/bufferline.nvim', tag = "v2.*"}
+    use "cpea2506/one_monokai.nvim"
 end)
