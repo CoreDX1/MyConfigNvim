@@ -10,6 +10,13 @@ map('i', 'jk', '<ESC>', {noremap = true, silent = false})
 map('i', 'kj', '<ESC>', {noremap = true, silent = false})
 
 map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+--Htop
+set("n", "f", "<cmd>HopChar1CurrentLineAC<CR>")
+set("n", "F", "<cmd>HopChar1CurrentLineBC<CR>")
+set("n", "s", "<cmd>HopChar2AC<CR>")
+set("n", "S", "<cmd>HopChar2BC<CR>")
+set("n", "<leader>s", "<cmd>HopLineStartAC<CR>")
+set("n", "<leader>S", "<cmd>HopLineStartBC<CR>")
 
 --Buffer
 set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")

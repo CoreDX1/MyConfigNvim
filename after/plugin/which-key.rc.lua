@@ -67,6 +67,7 @@ local opts = {
 local mappings = {
     ["q"] = { "<cmd>q<CR>", "Quit" },
     ["w"] = { "<cmd>w<CR>", "Save" },
+    ["x"] = { "<cmd>BufferLinePickClose<CR>", "Save" },
     p = {
         name = "Packer",
         c = { "<cmd>PackerCompile<cr>", "Compile" },

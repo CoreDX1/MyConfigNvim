@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/core/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/core/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/core/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -211,11 +216,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/core/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["one_monokai.nvim"] = {
-    loaded = true,
-    path = "/home/core/.local/share/nvim/site/pack/packer/start/one_monokai.nvim",
-    url = "https://github.com/cpea2506/one_monokai.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
