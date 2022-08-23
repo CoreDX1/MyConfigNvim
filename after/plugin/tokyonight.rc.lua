@@ -25,4 +25,5 @@ vim.g.tokyonight_colors = {
 }
 ]]
 
-vim.cmd[[colorscheme catppuccin]]
+--vim.cmd[[colorscheme ]]
+vim.cmd("colorscheme onedarkpro")

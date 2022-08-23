@@ -92,5 +92,6 @@ packer.startup(function(use)
     use {
         "folke/which-key.nvim"
     }
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use {'simrat39/symbols-outline.nvim'}
+    use {"olimorris/onedarkpro.nvim"}
 end)
