@@ -1,53 +1,26 @@
-local M = {}
-local map = vim.keymap.set
-local cmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
+vim.g.mapleader = ' '
+local map = vim.api.nvim_set_keymap
+local set = vim.keymap.set
+map('n', '<C-h>', '<C-w>h', {noremap = true, silent = false})
+map('n', '<C-l>', '<C-w>l', {noremap = true, silent = false})
+map('n', '<C-j>', '<C-w>j', {noremap = true, silent = false})
+map('n', '<C-k>', '<C-w>k', {noremap = true, silent = false})
 
--- Remap space as leader key
-map("", "<Space>", "<Nop>")
-vim.g.mapleader = " "
+map('i', 'jk', '<ESC>', {noremap = true, silent = false})
+map('i', 'kj', '<ESC>', {noremap = true, silent = false})
 
---General
-map("n", "<leader>w", "<cmd>w<CR>")
-map("n", "<leader>q", "<cmd>q<CR>")
-map("n", "<leader>l", "<cmd>luafile %<CR>")
+map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
---Lenguajes
-map("n", "<leader>js", "<cmd>! node %<CR>")
+--Buffer
+set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
+set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+--smart
+set('n', '<C-h>', require('smart-splits').move_cursor_left)
+set('n', '<C-j>', require('smart-splits').move_cursor_down)
+set('n', '<C-k>', require('smart-splits').move_cursor_up)
+set('n', '<C-l>', require('smart-splits').move_cursor_right)
+set('n', '<A-h>', require('smart-splits').resize_left)
+set('n', '<A-j>', require('smart-splits').resize_down)
+set('n', '<A-k>', require('smart-splits').resize_up)
+set('n', '<A-l>', require('smart-splits').resize_right)
 
---Packer
-map("n", "<leader>ps", "<cmd>PackerSync<CR>")
-
---telescope
-map("n", "<leader>fz", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", { noremap = true })
-map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
-map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
-map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
-
---Hop
-map("n", "f", "<cmd>HopChar1CurrentLineAC<CR>")
-map("n", "F", "<cmd>HopChar1CurrentLineBC<CR>")
-map("n", "s", "<cmd>HopChar2AC<CR>")
-map("n", "S", "<cmd>HopChar2BC<CR>")
-map("n", "<leader>s", "<cmd>HopLineStartAC<CR>")
-map("n", "<leader>S", "<cmd>HopLineStartBC<CR>")
-
---Smart splits
-map('n', '<C-h>', require('smart-splits').move_cursor_left)
-map('n', '<C-j>', require('smart-splits').move_cursor_down)
-map('n', '<C-k>', require('smart-splits').move_cursor_up)
-map('n', '<C-l>', require('smart-splits').move_cursor_right)
-map('n', '<A-h>', require('smart-splits').resize_left)
-map('n', '<A-j>', require('smart-splits').resize_down)
-map('n', '<A-k>', require('smart-splits').resize_up)
-map('n', '<A-l>', require('smart-splits').resize_right)
-
---Bufferline
-map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
-map("n", "<leader>x", "<cmd>BufferLinePickClose<CR>")
-map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
-map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
---Lspsaga
-map('n', '<leader>gj', '<cmd>Lspsaga show_line_diagnostics<CR>')
---Formatting
-map('n', '<leader>lf', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>')

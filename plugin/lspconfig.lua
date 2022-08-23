@@ -68,11 +68,26 @@ nvim_lsp.bashls.setup {
     capabilities = capabilities
 }
 
+nvim_lsp.emmet_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {
+        "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "typescript.tsx"
+    },
+    init_options = {
+        html = {
+            options = {
+                -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+                ["bem.enabled"] = true,
+            },
+        },
+    }
+}
 
 nvim_lsp.html.setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx", "html" },
 }
 
 nvim_lsp.tsserver.setup {

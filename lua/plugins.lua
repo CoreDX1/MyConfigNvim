@@ -89,4 +89,8 @@ packer.startup(function(use)
         end
     }
     use 'JoosepAlviste/nvim-ts-context-commentstring'
+    -- WhichKey
+    use {
+        "folke/which-key.nvim"
+    }
 end)
