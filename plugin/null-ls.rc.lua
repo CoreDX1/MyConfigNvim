@@ -7,7 +7,14 @@ local diagnostic = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = true,
     sources = {
-        formatting.prettier,
+        formatting.prettier.with({
+            filetypes = {
+                "javascript", "typescript", "css", "scss", "html", "json", "yaml", "markdown", "graphql", "md", "txt",
+            },
+            generator_opts = {
+                command = "prettier --write",
+            }
+        }),
         diagnostic.eslint_d,
         formatting.lua_format.with({
             extra_args = {

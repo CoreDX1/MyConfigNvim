@@ -97,17 +97,18 @@ nvim_lsp.html.setup {
 }
 
 nvim_lsp.tsserver.setup {
-    on_attach = on_attach,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-    cmd = { "typescript-language-server", "--stdio" },
-    capabilities = capabilities,
+    capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    on_attach = function(client)
+        client.resolved_capabilities.document_formatting = true
+    end,
 }
 
-nvim_lsp.eslint.setup{
+nvim_lsp.eslint.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = { "vscode-eslint-language-server", "--stdio" },
-    filetype = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue" }
+    filetype = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx",
+        "vue" }
 }
 
 nvim_lsp.sumneko_lua.setup {
