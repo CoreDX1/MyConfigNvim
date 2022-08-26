@@ -65,6 +65,7 @@ local opts = {
 }
 
 local mappings = {
+    ["t"] = { "<cmd>luafile %<CR>", "Refresh file"},
     ["q"] = { "<cmd>q<CR>", "Quit" },
     ["w"] = { "<cmd>w<CR>", "Save" },
     ["x"] = { "<cmd>BufferLinePickClose<CR>", "Save" },
