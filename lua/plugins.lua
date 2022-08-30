@@ -95,5 +95,5 @@ packer.startup(function(use)
     use { 'simrat39/symbols-outline.nvim' }
     use { "olimorris/onedarkpro.nvim" }
     use { "mfussenegger/nvim-jdtls", ft = "java" }
-    use { "akinsho/toggleterm.nvim", tag = 'v2.*'}
+    use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
 end)
