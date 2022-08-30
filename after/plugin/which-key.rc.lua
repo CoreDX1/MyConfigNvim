@@ -65,7 +65,7 @@ local opts = {
 }
 
 local mappings = {
-    ["t"] = { "<cmd>luafile %<CR>", "Refresh file"},
+    ["t"] = { "<cmd>ToggleTerm<CR>", "Terminal" },
     ["q"] = { "<cmd>q<CR>", "Quit" },
     ["w"] = { "<cmd>w<CR>", "Save" },
     ["x"] = { "<cmd>BufferLinePickClose<CR>", "Save" },
@@ -86,6 +86,7 @@ local mappings = {
         w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>Mason<cr>", "Mason Info" },
+        p = { "<cmd>Prettier<cr>", "Prettier" },
         j = {
             vim.diagnostic.goto_next,
             "Next Diagnostic",
@@ -103,9 +104,19 @@ local mappings = {
     },
     z = {
         name = "Lsp-saga",
-        j = {"<cmd>Lspsaga show_line_diagnostics<CR>", "Diagnostics"},
-        r = {"<cmd>Lspsaga rename<CR>", "Rename"},
-    }
+        j = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Diagnostics" },
+        r = { "<cmd>Lspsaga rename<CR>", "Rename" },
+    },
+  L = {
+    name = "Java",
+    o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" },
+    v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" },
+    c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" },
+    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" },
+    T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" },
+    u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
+  },
+
 }
 
 wk.register(mappings, opts)

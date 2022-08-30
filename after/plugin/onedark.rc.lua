@@ -3,7 +3,7 @@ require("onedarkpro").setup({
     light_theme = "onedark", -- The default light theme
     colors = {}, -- Override default colors by specifying colors for 'onelight' or 'onedark' themes
     highlights = {
-        Comment = { fg = "#ff0000", bg = "" }
+        Comment = { fg = "#8DCB81", bg = "" }
     }, -- Override default highlight groups
     ft_highlights = {}, -- Override default highlight groups for specific filetypes
     plugins = { -- Override which plugin highlight groups are loaded

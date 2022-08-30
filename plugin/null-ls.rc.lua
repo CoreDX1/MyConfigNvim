@@ -15,7 +15,6 @@ null_ls.setup({
                 command = "prettier --write",
             }
         }),
-        diagnostic.eslint_d,
         formatting.lua_format.with({
             extra_args = {
                 '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
