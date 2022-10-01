@@ -1,28 +1,28 @@
-local status, null_ls = pcall(require, "null_ls")
-if (not status) then return end
+local null_ls = require("null-ls")
+local h = require("null-ls.helpers")
+local methods = require("null-ls.methods")
 
-local formatting = null_ls.builtins.formatting
-local diagnostic = null_ls.builtins.diagnostics
+local FORMATTING = methods.internal.FORMATTING
 
-null_ls.setup({
-    debug = true,
-    sources = {
-        formatting.prettier.with({
-            filetypes = {
-                "javascript", "typescript", "css", "scss", "html", "json", "yaml", "markdown", "graphql", "md", "txt",
+-- register any number of sources simultaneously
+local sources = {
+    null_ls.builtins.formatting.csharpier.with({
+        name = "csharpier",
+        meta = {
+            url = "https://csharpier.com/",
+            description = "CSharpier is an opinionated code formatter for c#",
+        },
+        method = FORMATTING,
+        filetypes = { "cs" },
+        generator_opts = {
+            command = "dotnet-csharpier",
+            args = {
+                "--write-stdout",
             },
-            generator_opts = {
-                command = "prettier --write",
-            }
-        }),
-        formatting.lua_format.with({
-            extra_args = {
-                '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
-                '--break-after-table-lb', '--indent-width=2'
-            }
-        }),
-        formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
-    },
+            to_stdin = true,
+        },
+        factory = h.formatter_factory,
+    }),
     on_attach = function(client)
         if client.resolved_capabilities.document_formatting then
             vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
@@ -35,4 +35,6 @@ null_ls.setup({
       augroup END
     ]]
     end
-})
+}
+
+null_ls.setup({ sources = sources })
