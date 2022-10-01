@@ -111,6 +111,16 @@ nvim_lsp.eslint.setup {
         "vue" }
 }
 
+local pid = vim.fn.getpid()
+
+local omnisharp_bin = "/home/core/dotnet-languages/OmniSharp"
+
+nvim_lsp.omnisharp.setup{
+    cmd = {omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid)},
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 nvim_lsp.sumneko_lua.setup {
     on_attach = on_attach,
     settings = {
