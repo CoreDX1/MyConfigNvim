@@ -6,7 +6,7 @@ end
 
 color.setup({
 	-- A list of parser names, or "all"
-	ensure_installed = { "c", "lua", "rust", "javascript" },
+	ensure_installed = {"javascript" , "http", "json"},
 
 	sync_install = false,
 
