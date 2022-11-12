@@ -21,6 +21,7 @@ set("n", "<leader>S", "<cmd>HopLineStartBC<CR>")
 --Buffer
 set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
 set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+
 --smart
 set('n', '<C-h>', require('smart-splits').move_cursor_left)
 set('n', '<C-j>', require('smart-splits').move_cursor_down)
@@ -30,4 +31,3 @@ set('n', '<A-h>', require('smart-splits').resize_left)
 set('n', '<A-j>', require('smart-splits').resize_down)
 set('n', '<A-k>', require('smart-splits').resize_up)
 set('n', '<A-l>', require('smart-splits').resize_right)
-

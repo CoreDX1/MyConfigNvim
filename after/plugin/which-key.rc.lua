@@ -81,7 +81,7 @@ local mappings = {
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-		f = { "<cmd>lua vim.lsp.buf.formatting_seq_sync()<cr>", "Formatting" },
+		f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Formatting" },
 		d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
@@ -106,15 +106,6 @@ local mappings = {
 		name = "Lsp-saga",
 		j = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Diagnostics" },
 		r = { "<cmd>Lspsaga rename<CR>", "Rename" },
-	},
-	L = {
-		name = "Java",
-		o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" },
-		v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" },
-		c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" },
-		t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" },
-		T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" },
-		u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
 	},
 }
 
