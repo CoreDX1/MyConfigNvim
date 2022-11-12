@@ -1,4 +1,9 @@
-require("toggleterm").setup({
+local status, term = pcall(require, "toggleterm")
+if not status then
+	return
+end
+
+term.setup({
 	direction = "float",
 	size = 10,
 	close_on_exit = true, -- close the terminal window when the process exits

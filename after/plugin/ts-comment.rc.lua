@@ -1,4 +1,9 @@
-require("nvim-treesitter.configs").setup({
+local status, tscommet = pcall(require, "nvim-treesitter.configs")
+if not status then
+	return
+end
+
+tscommet.setup({
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,

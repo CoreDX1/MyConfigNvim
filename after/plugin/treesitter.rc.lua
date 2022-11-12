@@ -1,4 +1,10 @@
-require("nvim-treesitter.configs").setup({
+local status, color = pcall(require, "nvim-treesitter.configs")
+if not status then
+	return
+end
+
+
+color.setup({
 	-- A list of parser names, or "all"
 	ensure_installed = { "c", "lua", "rust", "javascript" },
 
