@@ -109,7 +109,7 @@ nvim_lsp.html.setup({
 nvim_lsp.tsserver.setup({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = true
+		client.server_capabilities.document_formatting = true
 	end,
 })
 
@@ -130,10 +130,10 @@ nvim_lsp.eslint.setup({
 
 local pid = vim.fn.getpid()
 
-local omnisharp_bin = "/home/core/dotnet-languages/OmniSharp"
+local omnisharp_bin = "/home/core/Downloads/omnisharp/OmniSharp.dll"
 
 nvim_lsp.omnisharp.setup({
-	cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+    cmd = { "dotnet", omnisharp_bin },
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
