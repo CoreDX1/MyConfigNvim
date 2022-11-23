@@ -129,13 +129,17 @@ nvim_lsp.eslint.setup({
 })
 
 local pid = vim.fn.getpid()
-
 local omnisharp_bin = "/home/core/Downloads/omnisharp/OmniSharp.dll"
 
 nvim_lsp.omnisharp.setup({
-    cmd = { "dotnet", omnisharp_bin },
-	on_attach = on_attach,
-	capabilities = capabilities,
+    cmd = {"dotnet", omnisharp_bin},
+    enable_editorconfig_support = true,
+    enable_ms_build_load_projects_on_demand = false,
+    enable_roslyn_analyzers = false,
+    organize_imports_on_format = false,
+    enable_import_completion = false,
+    sdk_include_prereleases = true,
+    analyze_open_documents_only = false,
 })
 
 nvim_lsp.sumneko_lua.setup({
