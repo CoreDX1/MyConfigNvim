@@ -30,7 +30,6 @@ packer.startup(function(use)
     use("windwp/nvim-autopairs")
     use("windwp/nvim-ts-autotag")
     use("norcalli/nvim-colorizer.lua")
-    use("folke/zen-mode.nvim")
     use({
         "iamcco/markdown-preview.nvim",
         run = function()
@@ -63,16 +62,6 @@ packer.startup(function(use)
             require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
         end,
     })
-    --Zen
-    use({
-        "Pocco81/true-zen.nvim",
-        config = function()
-            require("true-zen").setup({
-                -- your config goes here
-                -- or just leave it empty :)
-            })
-        end,
-    })
 
     use("simrat39/symbols-outline.nvim")
     use("mrjones2014/smart-splits.nvim")
@@ -95,4 +84,6 @@ packer.startup(function(use)
     -- Http Rest
     use("rest-nvim/rest.nvim")
     use('Tsuzat/NeoSolarized.nvim')
+    use("ray-x/lsp_signature.nvim")
+
 end)
