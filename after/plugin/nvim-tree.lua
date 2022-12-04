@@ -33,8 +33,8 @@ tree.setup({
 		dotfiles = true,
 	},
 	diagnostics = {
-		enable = true,
-		show_on_dirs = true,
+		enable = false,
+		show_on_dirs = false,
 		debounce_delay = 50,
 		icons = {
 			hint = "",
