@@ -4,7 +4,7 @@ if not status then
 end
 
 term.setup({
-	direction = "float",
+	direction = "horizontal",
 	size = 10,
 	close_on_exit = true, -- close the terminal window when the process exits
 	shell = vim.o.shell, -- change the default shell
