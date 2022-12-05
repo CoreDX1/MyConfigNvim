@@ -19,7 +19,7 @@ tree.setup({
 		icons = {
 			webdev_colors = true,
 			git_placement = "before",
-			padding = " ",
+			padding = "  ",
 			symlink_arrow = " ➛ ",
 			show = {
 				file = false,
@@ -33,8 +33,8 @@ tree.setup({
 		dotfiles = true,
 	},
 	diagnostics = {
-		enable = false,
-		show_on_dirs = false,
+		enable = true,
+		show_on_dirs = true,
 		debounce_delay = 50,
 		icons = {
 			hint = "",

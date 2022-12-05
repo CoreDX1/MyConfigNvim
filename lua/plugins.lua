@@ -82,7 +82,5 @@ packer.startup(function(use)
 
     -- Http Rest
     use("rest-nvim/rest.nvim")
-    -- use('Tsuzat/NeoSolarized.nvim')
-    use("navarasu/onedark.nvim")
-
+    use('Tsuzat/NeoSolarized.nvim')
 end)
