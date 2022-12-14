@@ -39,7 +39,7 @@ packer.startup(function(use)
     use("lewis6991/gitsigns.nvim")
     use("dinhhuy258/git.nvim") -- For git blame & browse
     use("kyazdani42/nvim-tree.lua")
-    use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+    -- use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
     use("pangloss/vim-javascript")
     use("leafgarland/typescript-vim")
     use("peitalin/vim-jsx-typescript")
@@ -83,4 +83,6 @@ packer.startup(function(use)
     -- Http Rest
     use("rest-nvim/rest.nvim")
     use('Tsuzat/NeoSolarized.nvim')
+    -- GitHub Copilod
+    use("github/copilot.vim")
 end)
