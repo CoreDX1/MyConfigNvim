@@ -133,6 +133,8 @@ local omnisharp_bin = "/home/core/Downloads/omnisharp/OmniSharp.dll"
 
 nvim_lsp.omnisharp.setup({
     cmd = {"dotnet", omnisharp_bin},
+	on_attach = on_attach,
+	capabilities = capabilities,
     enable_editorconfig_support = true,
     enable_ms_build_load_projects_on_demand = false,
     enable_roslyn_analyzers = false,
@@ -185,3 +187,14 @@ vim.diagnostic.config({
 		source = "always", -- Or "if_many"
 	},
 })
+
+vim.notify = function(msg, log_level, _opts)
+    if msg:match("exit code") then
+        return
+    end
+    if log_level == vim.log.levels.ERROR then
+        vim.api.nvim_err_writeln(msg)
+    else
+        vim.api.nvim_echo({{msg}}, true, {})
+    end
+end
