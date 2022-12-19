@@ -8,7 +8,7 @@ require("cmp").setup({
 	sources = {
 		{ name = "cmp_tabnine" },
 		{ name = "path" },
-        {name  = "vim-dadbod-completion"},
+		{ name = "vim-dadbod-completion" },
 	},
 })
 local source_mapping = {
@@ -17,7 +17,6 @@ local source_mapping = {
 	path = "[Path]",
 	buffer = "[Buffer]",
 	nvim_lua = "[Lua]",
-
 }
 
 cmp.setup({
@@ -42,7 +41,7 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "path" },
 		{ name = "cmp_tabnine" },
-        {name  = "vim-dadbod-completion"},
+		{ name = "vim-dadbod-completion" },
 		{ name = "buffer" },
 	}),
 	formatting = {

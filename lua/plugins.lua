@@ -35,7 +35,7 @@ packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-	use("akinsho/nvim-bufferline.lua")
+	-- use("akinsho/nvim-bufferline.lua")
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 	use("kyazdani42/nvim-tree.lua")
@@ -64,7 +64,7 @@ packer.startup(function(use)
 
 	use("simrat39/symbols-outline.nvim")
 	use("mrjones2014/smart-splits.nvim")
-	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
+	-- use({ "akinsho/bufferline.nvim", tag = "v2.*" })
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
@@ -90,4 +90,5 @@ packer.startup(function(use)
 		"kristijanhusak/vim-dadbod-ui",
 		requires = { "kristijanhusak/vim-dadbod-completion", "tpope/vim-dadbod", "tpope/vim-dotenv" },
 	})
+    use 'j-morano/buffer_manager.nvim'
 end)

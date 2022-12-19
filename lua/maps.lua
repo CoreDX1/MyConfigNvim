@@ -23,8 +23,9 @@ set("n", "<leader>S", "<cmd>HopLineStartBC<CR>")
 
 --Buffer
 --
-set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
-set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+-- set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>")
+-- set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+set("n", "<S-h>", "<cmd>lua require('buffer_manager.ui').toggle_quick_menu()<CR>")
 
 --smart Cursor Moved
 
