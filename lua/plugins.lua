@@ -91,4 +91,5 @@ packer.startup(function(use)
 		requires = { "kristijanhusak/vim-dadbod-completion", "tpope/vim-dadbod", "tpope/vim-dotenv" },
 	})
     use 'j-morano/buffer_manager.nvim'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
